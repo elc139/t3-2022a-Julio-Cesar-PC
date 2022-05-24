@@ -20,4 +20,4 @@ Nome: Julio Cesar Polmann Cuencas
 ---
 
 2. Usando o JMC, como o tempo de execução se divide entre os diversos métodos invocados em cada caso? (veja Method Profiling no JMC)
-    - TODO
+    - O que consegui notar é que se aumentarmos o n_jobs para o mesmo conjuto algoritimo dataset, obtemos um aumentao nas chamadas do weka, e o total de eventos.
