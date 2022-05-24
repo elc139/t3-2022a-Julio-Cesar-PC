@@ -1,0 +1,37 @@
+
+Options: -dont-fetch-model -learner RandomForestClassifier -parameters max_depth=16,max_samples=1.0,n_jobs=4 -py-command python3 
+
+=== Classifier model (full training set) ===
+
+RandomForestClassifier(max_depth=16, max_samples=1.0, n_jobs=4)
+
+Time taken to build model: 10.88 seconds
+
+Time taken to test model on test split: 0.43 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances       28164               93.88   %
+Incorrectly Classified Instances      1836                6.12   %
+Kappa statistic                          0.2651
+Mean absolute error                      0.0961
+Root mean squared error                  0.2199
+Relative absolute error                 77.7769 %
+Root relative squared error             89.1561 %
+Total Number of Instances            30000     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,991    0,809    0,946      0,991    0,968      0,312    0,860     0,986     0
+                 0,191    0,009    0,591      0,191    0,288      0,312    0,860     0,389     1
+Weighted Avg.    0,939    0,757    0,923      0,939    0,924      0,312    0,860     0,947     
+
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 27792   257 |     a = 0
+  1579   372 |     b = 1
+

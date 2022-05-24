@@ -1,0 +1,56 @@
+
+Options: -learner XGBClassifier -parameters tree_method='hist',n_jobs=8 -py-command python3 
+
+=== Classifier model (full training set) ===
+
+XGBClassifier(base_score=0.5, booster='gbtree', callbacks=None,
+              colsample_bylevel=1, colsample_bynode=1, colsample_bytree=1,
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, gamma=0, gpu_id=-1, grow_policy='depthwise',
+              importance_type=None, interaction_constraints='',
+              learning_rate=0.300000012, max_bin=256, max_cat_to_onehot=4,
+              max_delta_step=0, max_depth=6, max_leaves=0, min_child_weight=1,
+              missing=nan, monotone_constraints='()', n_estimators=100,
+              n_jobs=8, num_parallel_tree=1, objective='multi:softprob',
+              predictor='auto', random_state=0, reg_alpha=0, ...)
+
+Time taken to build model: 43.1 seconds
+
+Time taken to test model on test split: 2.92 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances      101060               86.9692 %
+Incorrectly Classified Instances     15142               13.0308 %
+Kappa statistic                          0.7898
+Mean absolute error                      0.0645
+Root mean squared error                  0.1651
+Relative absolute error                 36.1898 %
+Root relative squared error             55.2833 %
+Total Number of Instances           116202     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,838    0,077    0,863      0,838    0,851      0,767    0,961     0,939     1
+                 0,897    0,131    0,866      0,897    0,881      0,766    0,958     0,954     2
+                 0,914    0,007    0,902      0,914    0,908      0,902    0,998     0,970     3
+                 0,841    0,000    0,907      0,841    0,873      0,873    1,000     0,949     4
+                 0,606    0,001    0,875      0,606    0,716      0,725    0,995     0,836     5
+                 0,814    0,004    0,850      0,814    0,832      0,827    0,997     0,920     6
+                 0,910    0,002    0,944      0,910    0,927      0,924    0,999     0,981     7
+Weighted Avg.    0,870    0,092    0,870      0,870    0,869      0,782    0,965     0,948     
+
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g   <-- classified as
+ 35630  6627     1     0    25     4   206 |     a = 1
+  5264 50560   231     0   133   156    18 |     b = 2
+     0   279  6659    26     5   317     0 |     c = 3
+     0     1    63   439     0    19     0 |     d = 4
+    14   694    33     0  1146     4     0 |     e = 5
+     4   233   392    19     0  2838     0 |     f = 6
+   360    14     0     0     0     0  3788 |     g = 7
+
