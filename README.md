@@ -8,8 +8,9 @@ Nome: Julio Cesar Polmann Cuencas
 | Algorítmo  | dataset | n_jobs |
 |---|---|---|
 | XGBoost | GMSC | 1-4-8 |
+| XGBoost | Covertype | 1-4-8 |
+| RandomForest | GMSC | 1-4-8 |
 | RandomForest | Covertype | 1-4-8 |
-
 
 ---
 # Questões
